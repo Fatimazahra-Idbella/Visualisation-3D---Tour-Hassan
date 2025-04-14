@@ -1,48 +1,63 @@
-🌍 Visualisation 3D de la Tour Hassan avec CesiumJS
-🎯 Objectif
-Développement d'une application web simple utilisant CesiumJS pour visualiser un globe en 3D, centrer la vue sur la ville de Rabat, et afficher un point d’intérêt (POI) sur la Tour Hassan, accompagné d'une description contextuelle dans une info-bulle.
+# 🌍 Visualisation 3D de la Tour Hassan avec CesiumJS
 
-🧱 Structure du projet
-index.html : Fichier principal contenant le code HTML, CSS et JavaScript nécessaire à la visualisation.
+## 🎯 Objectif
 
-⚙️ Technologies utilisées
-HTML5 / CSS3
+Développement d'une application web simple utilisant **CesiumJS** pour visualiser un globe en 3D, centrer la vue sur la ville de **Rabat**, et afficher un **point d’intérêt (POI)** sur la **Tour Hassan**, accompagné d'une description contextuelle dans une info-bulle.
 
-JavaScript
+---
 
-CesiumJS (via CDN)
+## 🧱 Structure du projet
 
-🛠️ Étapes de réalisation
-Préparation de l’environnement :
+- `index.html` : Fichier principal contenant le code HTML, CSS et JavaScript nécessaire à la visualisation.
 
-Création du fichier index.html
+---
 
-Intégration de la bibliothèque CesiumJS via CDN
+## ⚙️ Technologies utilisées
 
-Mise en place d’un conteneur <div> occupant toute la fenêtre pour afficher la scène 3D
+- HTML5 / CSS3  
+- JavaScript  
+- CesiumJS (via CDN)
 
-Initialisation du globe :
+---
 
-Utilisation de Cesium.Viewer avec le terrain mondial
+## 🛠️ Étapes de réalisation
 
-Centrage automatique de la caméra sur Rabat, Maroc
+### 🔧 Préparation de l’environnement
 
-Ajout du point d’intérêt (POI) :
+- Création du fichier `index.html`  
+- Intégration de la bibliothèque **CesiumJS** via CDN  
+- Mise en place d’un conteneur `<div>` occupant toute la fenêtre pour afficher la scène 3D  
 
-Placement d’un marqueur rouge représentant la Tour Hassan
+### 🌐 Initialisation du globe
 
-Ajout d’une info-bulle descriptive qui s’affiche au clic
+- Utilisation de `Cesium.Viewer` avec le terrain mondial  
+- Centrage automatique de la caméra sur **Rabat, Maroc**  
 
-Test de l’interaction :
+### 📍 Ajout du point d’intérêt (POI)
 
-L’utilisateur peut cliquer sur le marqueur pour afficher des informations historiques sur la Tour Hassan
+- Placement d’un marqueur rouge représentant la **Tour Hassan**  
+- Ajout d’une info-bulle descriptive qui s’affiche au clic  
 
-📍 Informations affichées : Tour Hassan
-La Tour Hassan est un minaret inachevé situé à Rabat, capitale du Maroc. Construite au XIIe siècle par le sultan Yacoub al-Mansour, elle devait devenir la plus grande mosquée du monde. Haute de 44 mètres, elle incarne aujourd’hui un symbole fort de l’architecture almohade et du patrimoine marocain.
+### 🧪 Test de l’interaction
 
-📷 Résultat attendu
-🌐 Un globe 3D centré sur Rabat
+- L’utilisateur peut cliquer sur le marqueur pour afficher des **informations historiques** sur la Tour Hassan
 
-📍 Un point rouge sur la position exacte de la Tour Hassan
+---
 
-📝 Une info-bulle affichant une description historique au clic
+## 📍 Informations affichées : Tour Hassan
+
+> La **Tour Hassan** est un minaret inachevé situé à **Rabat**, capitale du Maroc.  
+> Construite au XIIe siècle par le sultan **Yacoub al-Mansour**, elle devait devenir la plus grande mosquée du monde.  
+> Haute de **44 mètres**, elle incarne aujourd’hui un symbole fort de l’architecture almohade et du patrimoine marocain.
+
+---
+
+## 📷 Résultat
+
+- 🌐 Un **globe 3D** centré sur Rabat  
+- 📍 Un **marqueur rouge** sur la position exacte de la Tour Hassan  
+- 📝 Une **info-bulle** s’affichant avec un texte descriptif au clic
+
+---
+
+
