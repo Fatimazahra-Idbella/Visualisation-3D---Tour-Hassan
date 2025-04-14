@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Visualisation 3D - Tour Hassan</title>
+ 
+  <!-- CesiumJS CDN -->
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.112/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.112/Build/Cesium/Widgets/widgets.css" rel="stylesheet" />
+ 
+  <!-- Style -->
+  <style>
+    html, body, #cesiumContainer {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+ 
+  <div id="cesiumContainer"></div>
+ 
+  <script>
+    // Initialisation du viewer
+    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0NjhlNjAzNC04ZmI3LTQ1MzQtYTZjMy03ZjUxZTI5ZmUxNGMiLCJpZCI6MjkzODY1LCJpYXQiOjE3NDQ2MTkwMjF9.p3nEYthG1h01KS3nOK55LCDQrmFcRXXPXVGwIgpetcM';
+ 
+    const viewer = new Cesium.Viewer('cesiumContainer', {
+        terrainProvider: Cesium.Terrain.fromWorldTerrain()
+ 
+    });
+ 
+    // Centrer sur Rabat
+    viewer.camera.flyTo({
+      destination: Cesium.Cartesian3.fromDegrees(-6.8326, 34.0209, 15000)
+    });
+ 
+    // Ajouter la Tour Hassan
+    viewer.entities.add({
+      name: "Tour Hassan",
+      position: Cesium.Cartesian3.fromDegrees(-6.8226, 34.0151),
+      point: {
+        pixelSize: 10,
+        color: Cesium.Color.RED,
+        outlineColor: Cesium.Color.WHITE,
+        outlineWidth: 2
+      },
+      description: `
+        <h2>Tour Hassan</h2>
+        <p>La Tour Hassan est un minaret inachevé situé à Rabat, capitale du Maroc. Elle fut commandée par le sultan Yacoub al-Mansour au XIIe siècle dans le but de devenir la plus grande mosquée du monde. Haute de 44 mètres (au lieu des 86 mètres prévus), elle est construite en grès rouge et représente un chef-d'œuvre de l'architecture almohade. La tour, accompagnée des vestiges de la mosquée et du Mausolée Mohammed V, constitue un site historique majeur et un symbole fort de Rabat.</p>
+      `
+    });
+  </script>
+ 
+</body>
+</html>
